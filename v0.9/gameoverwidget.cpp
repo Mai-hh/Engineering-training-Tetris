@@ -1,5 +1,5 @@
 #include "gameoverwidget.h"
-#include <QPushButton>
+
 GameOverWidget::GameOverWidget(QWidget *parent) : QDialog(parent)
 {
     restart = new QPushButton(this);
@@ -14,7 +14,3 @@ GameOverWidget::GameOverWidget(QWidget *parent) : QDialog(parent)
     this->setFixedSize(250,450);
     this->setWindowTitle("Game over !");
 }
-//void GameOverWidget::btn_set()
-//{
-
-//}

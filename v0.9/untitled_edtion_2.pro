@@ -16,22 +16,29 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    StartMainWindow.cpp \
+    choselevelscene.cpp \
     gameoverwidget.cpp \
-    main.cpp \
+    gamescenewindow.cpp \
     gamewidget.cpp \
-    settingmainwindow.cpp \
-    settingpushbtn.cpp
+    main.cpp \
+    mybutton.cpp
 
 HEADERS += \
+    StartMainWindow.h \
+    choselevelscene.h \
     gameoverwidget.h \
+    gamescenewindow.h \
     gamewidget.h \
-    settingmainwindow.h \
-    settingpushbtn.h
+    mybutton.h
 
 FORMS += \
-    gamewidget.ui
+    mainwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    res.qrc
