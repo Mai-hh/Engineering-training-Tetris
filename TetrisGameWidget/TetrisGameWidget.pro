@@ -18,11 +18,15 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     gameoverwidget.cpp \
     main.cpp \
-    gamewidget.cpp
+    gamewidget.cpp \
+    settingmainwindow.cpp \
+    settingpushbtn.cpp
 
 HEADERS += \
     gameoverwidget.h \
-    gamewidget.h
+    gamewidget.h \
+    settingmainwindow.h \
+    settingpushbtn.h
 
 FORMS += \
     gamewidget.ui
