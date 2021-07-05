@@ -6,6 +6,20 @@ GameWidget::GameWidget(QWidget *parent) : QWidget(parent)
     this->setFixedSize(650,1000);
     btn_set();
     GameOver();
+    //创建暂停界面
+    stWidget = new settingWidget(this);
+
+    connect(btn_pause,&QPushButton::clicked,[=](){
+        //动画是否要做?
+        //直接呼出暂停界面，无需隐藏游戏界面
+        stWidget->exec();
+    });
+
+    connect(stWidget,&settingWidget::backToMainWindow,[=](){
+        this->hide();
+       emit this->backToMainWindow();
+    });
+
 }
 
 void GameWidget::paintEvent(QPaintEvent *event)
@@ -25,6 +39,7 @@ void GameWidget::btn_set()
     btn_pause->setFixedSize(50,50);
     btn_pause->move(SideLength * (Row+2) + Margin, Margin + SideLength * (Line-2));
     btn_pause->setText("Pause");
+
 }
 
 void GameWidget::GameOver()

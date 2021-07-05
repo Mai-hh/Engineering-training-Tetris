@@ -22,7 +22,8 @@ SOURCES += \
     gamescenewindow.cpp \
     gamewidget.cpp \
     main.cpp \
-    mybutton.cpp
+    mybutton.cpp \
+    settingwidget.cpp
 
 HEADERS += \
     StartMainWindow.h \
@@ -30,7 +31,8 @@ HEADERS += \
     gameoverwidget.h \
     gamescenewindow.h \
     gamewidget.h \
-    mybutton.h
+    mybutton.h \
+    settingwidget.h
 
 FORMS += \
     mainwindow.ui

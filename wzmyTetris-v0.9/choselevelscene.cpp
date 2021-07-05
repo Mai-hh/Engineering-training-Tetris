@@ -26,6 +26,8 @@ ChoseLevelScene::ChoseLevelScene(QWidget *parent) : QWidget(parent)
 
     MyButton *choseBtn=new MyButton(":/stop.png");
     gameWidget = new GameWidget;
+    gameWidget->setWindowTitle("Have fun!");
+
     choseBtn->setParent(this);
     choseBtn->move(this->width()-backBtn->width(),this->height()*0.5);
 
@@ -41,7 +43,9 @@ ChoseLevelScene::ChoseLevelScene(QWidget *parent) : QWidget(parent)
     });
 
 
-
+    connect(gameWidget,&GameWidget::backToMainWindow,[=](){
+        emit this->choseSceneBack();
+    });
 
 
 }

@@ -7,6 +7,8 @@
 #include <QPropertyAnimation>
 #include <QTimer>
 #include "choselevelscene.h"
+#include "settingwidget.h"
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -61,8 +63,12 @@ MainWindow::MainWindow(QWidget *parent)
 
         stopBtn->Zoom1();
         stopBtn->Zoom2();
+
+//        settingWidget *settingwidget = new settingWidget(this);
+//        settingwidget->exec();
         qDebug()<<"切换至暂停界面";
     });
+
 
 }
 
@@ -79,6 +85,7 @@ void MainWindow::paintEvent(QPaintEvent *){
 //    pix.load("");
 //    painter.drawPixmap(x,y,pix);
 }
+
 
 MainWindow::~MainWindow()
 {
