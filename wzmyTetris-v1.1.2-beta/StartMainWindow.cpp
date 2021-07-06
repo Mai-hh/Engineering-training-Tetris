@@ -17,7 +17,10 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     QSound *startsound=new QSound(":/res/bgm.wav");
+<<<<<<< HEAD
     QSound * bgm2 = new QSound(":/res/bgm2.0.wav");
+=======
+>>>>>>> 25affe1cb318d00d1147f77bcea84c03af27e185
     startsound->play();
     startsound->setLoops(-1);
     connect(ui->actionclose,&QAction::triggered,[=](){
@@ -69,7 +72,15 @@ MainWindow::MainWindow(QWidget *parent)
         stopBtn->Zoom1();
         stopBtn->Zoom2();
 
+<<<<<<< HEAD
 
+=======
+//        settingWidget *settingwidget = new settingWidget(this);
+//        settingwidget->exec();
+//        qDebug()<<"切换至暂停界面";
+        //暂停时先停bgm
+//        startsound->stop();
+>>>>>>> 25affe1cb318d00d1147f77bcea84c03af27e185
         //创建音乐对话框
         QDialog music(this);
         music.setFixedSize(400,200);
@@ -78,14 +89,21 @@ MainWindow::MainWindow(QWidget *parent)
         //创建两个单选项
         QRadioButton *radioClose = new QRadioButton("关闭",&music);
         QRadioButton *radioOpen = new QRadioButton("经典音乐",&music);
+<<<<<<< HEAD
         QRadioButton *radioOpen2 = new QRadioButton("动感电音",&music);
         radioClose->move(100,30);
         radioOpen->move(100,60);
         radioOpen2->move(100,90);
+=======
+        radioOpen->setChecked(true);//默认关闭bgm
+        radioClose->move(100,30);
+        radioOpen->move(100,60);
+>>>>>>> 25affe1cb318d00d1147f77bcea84c03af27e185
 
         //检测两个按钮的状态并设置音乐
         connect(radioClose,&QRadioButton::toggled,[=](bool checked){
             if(checked == true)
+<<<<<<< HEAD
             {
                    startsound->stop();
                    bgm2->stop();
@@ -106,6 +124,14 @@ MainWindow::MainWindow(QWidget *parent)
                    bgm2->setLoops(-1);//无限循环
                    startsound->stop();
                }
+=======
+                   startsound->stop();
+            });
+            connect(radioOpen,&QRadioButton::toggled,[=](bool checked){
+               if(checked == true)
+                   startsound->play();
+                   startsound->setLoops(-1);//无限循环
+>>>>>>> 25affe1cb318d00d1147f77bcea84c03af27e185
             });
         music.resize(200,100);
         music.exec();
