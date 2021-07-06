@@ -33,6 +33,16 @@
     <property name="title">
      <string>关于</string>
     </property>
+    <widget class="QMenu" name="menu_3">
+     <property name="title">
+      <string>开发人员</string>
+     </property>
+     <addaction name="actionddd"/>
+     <addaction name="actiond"/>
+     <addaction name="actionw"/>
+     <addaction name="actionz"/>
+    </widget>
+    <addaction name="menu_3"/>
    </widget>
    <addaction name="menu"/>
    <addaction name="menu_2"/>
@@ -41,6 +51,26 @@
   <action name="actionclose">
    <property name="text">
     <string>退出</string>
+   </property>
+  </action>
+  <action name="actionddd">
+   <property name="text">
+    <string>莫淮昊</string>
+   </property>
+  </action>
+  <action name="actiond">
+   <property name="text">
+    <string>晏昊晨</string>
+   </property>
+  </action>
+  <action name="actionw">
+   <property name="text">
+    <string>王熠昆</string>
+   </property>
+  </action>
+  <action name="actionz">
+   <property name="text">
+    <string>詹美祥</string>
    </property>
   </action>
  </widget>
