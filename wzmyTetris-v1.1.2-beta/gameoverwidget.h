@@ -10,8 +10,6 @@ public:
     explicit GameOverWidget(QWidget *parent = nullptr);
     QPushButton *restart;
     QPushButton *backToStart;
-//    void btn_set();
-
 signals:
 
 public slots:
