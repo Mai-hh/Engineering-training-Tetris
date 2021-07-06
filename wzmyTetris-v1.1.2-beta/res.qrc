@@ -1,0 +1,30 @@
+<RCC>
+    <qresource prefix="/">
+        <file>res/music.png</file>
+        <file>res/restart .png</file>
+        <file>res/settingbackground.jpg</file>
+        <file>res/start1.png</file>
+        <file>res/home.png</file>
+        <file>Image/1.png</file>
+        <file>Image/button.jpg</file>
+        <file>Image/scene1.jpg</file>
+        <file>Image/scene2.jpg</file>
+        <file>Image/settingbutton.jpg</file>
+        <file>Image/startbeijing1.webp</file>
+        <file>Image/startbutton.jpg</file>
+        <file>Image/stop.png</file>
+        <file>Image/backBtn.jpg</file>
+        <file>Image/piece.jpg</file>
+        <file>Image/piece1.jpg</file>
+        <file>Image/piece3.jpg</file>
+        <file>Image/piece4.jpg</file>
+        <file>Image/piece5.jpg.png</file>
+        <file>Image/settingbutton1.jpg</file>
+        <file>Image/settingbutton2.jpg</file>
+        <file>Image/settingbutton3.jpg</file>
+        <file>Image/settingbutton4.jpg</file>
+        <file>Image/settingbutton5.jpg</file>
+        <file>res/bgm.wav</file>
+        <file>res/bgm2.0.wav</file>
+    </qresource>
+</RCC>
