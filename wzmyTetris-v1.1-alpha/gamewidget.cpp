@@ -108,12 +108,6 @@ GameWidget::GameWidget(QWidget *parent) : QWidget(parent)
 void GameWidget::paintEvent(QPaintEvent *event)
 {
 
-
-
-
-
-
-
     QPainter painter(this);
 
     QPen pen;
@@ -149,11 +143,11 @@ void GameWidget::paintEvent(QPaintEvent *event)
     for(int i=0;i<4;i++)
         for(int j=0;j<4;j++)
             if(nextBlock[i][j]==1)
-                painter.drawRect(Margin*3+Row*SideLength+j*SideLength,Margin+i*SideLength,SideLength,SideLength);
+                painter.drawRect(Row*(SideLength+3)+j*SideLength+Margin,Margin+i*SideLength+50,SideLength,SideLength);
 
     painter.setPen(Qt::black);
     painter.setFont(QFont("Arial",14));
-    painter.drawText(QRect(Margin*3+Row*SideLength,Margin*2+4*SideLength,SideLength*3,SideLength*2),Qt::AlignCenter,"score: "+QString::number(score));
+    painter.drawText(QRect(Margin*3+Row*SideLength,Margin*2+6*SideLength,SideLength*3,SideLength*2),Qt::AlignCenter,"score: "+QString::number(score));
 
     for(int i=0;i<Line;i++)
         for(int j=0;j<Row;j++)
