@@ -24,7 +24,6 @@ ChoseLevelScene::ChoseLevelScene(QWidget *parent) : QWidget(parent)
 
         qDebug()<<"切换至开始关卡界面";
     });
-
     MyButton *choseBtn=new MyButton(":/Image/scene1.jpg");
     gameWidget = new GameWidget;
     gameWidget->setWindowTitle("Have fun!");

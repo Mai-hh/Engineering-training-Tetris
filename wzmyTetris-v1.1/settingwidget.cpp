@@ -20,8 +20,9 @@ settingWidget::settingWidget(QWidget *parent) : QDialog(parent)
     {
        startBtn->Zoom1();
        startBtn->Zoom2();
-       QTimer::singleShot(500,this,[=]()
+       QTimer::singleShot(400,this,[=]()
        {
+           emit this->ClockRun();
            this->hide();
        });
     });
@@ -36,10 +37,10 @@ settingWidget::settingWidget(QWidget *parent) : QDialog(parent)
     {
        restartBtn->Zoom1();
        restartBtn->Zoom2();
-       QTimer::singleShot(500,this,[=]()
+       QTimer::singleShot(400,this,[=]()
        {
+           emit this->Restart();
            this->hide();
-           //还要添加重开的功能
        });
     });
 
@@ -66,7 +67,7 @@ settingWidget::settingWidget(QWidget *parent) : QDialog(parent)
     {
        homeBtn->Zoom1();
        homeBtn->Zoom2();
-       QTimer::singleShot(500,this,[=]()
+       QTimer::singleShot(400,this,[=]()
        {
            this->hide();
            emit this->backToMainWindow();

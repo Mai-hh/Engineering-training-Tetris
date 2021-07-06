@@ -49,7 +49,7 @@ MainWindow::MainWindow(QWidget *parent)
 
         this->hide();
         choseLevelScene->show();
-        qDebug()<<"切换至选择关卡界面";
+        //qDebug()<<"切换至选择关卡界面";
 
     });
 
@@ -66,7 +66,7 @@ MainWindow::MainWindow(QWidget *parent)
 
 //        settingWidget *settingwidget = new settingWidget(this);
 //        settingwidget->exec();
-        qDebug()<<"切换至暂停界面";
+//        qDebug()<<"切换至暂停界面";
     });
 
 
