@@ -25,23 +25,58 @@ ChoseLevelScene::ChoseLevelScene(QWidget *parent) : QWidget(parent)
         qDebug()<<"切换至开始关卡界面";
     });
 
-    MyButton *choseBtn=new MyButton(":/Image/scene1.jpg");
     gameWidget = new GameWidget;
     gameWidget->setWindowTitle("Have fun!");
 
+
+    MyButton *choseBtn=new MyButton(":/Image/scene1.jpg");
     choseBtn->setParent(this);
-    choseBtn->move(this->width()*0.5-backBtn->width()*0.5,this->height()*0.32);
+    choseBtn->move(this->width()*0.5-backBtn->width()*0.5,this->height()*0.21);
+
+    MyButton *choseBtn2=new MyButton(":/Image/scene2.jpg");
+    choseBtn2->setParent(this);
+    choseBtn2->move(this->width()*0.5-backBtn->width()*0.5,this->height()*0.32);
+
+    MyButton *choseBtn3=new MyButton(":/Image/scene3.jpg");
+    choseBtn3->setParent(this);
+    choseBtn3->move(this->width()*0.5-backBtn->width()*0.5,this->height()*0.43);
 
     connect(choseBtn,&QPushButton::clicked,[=](){
 
         choseBtn->Zoom1();
         choseBtn->Zoom2();
-        QTimer::singleShot(500,this,[=](){
+        QTimer::singleShot(400,this,[=](){
             this->hide();
+            gameWidget->InitGame();
             gameWidget->show();
         });
-        qDebug()<<"切换至游戏关卡界面";
+        qDebug()<<"切换简单难度界面";
     });
+
+    connect(choseBtn2,&QPushButton::clicked,[=](){
+
+        choseBtn2->Zoom1();
+        choseBtn2->Zoom2();
+        QTimer::singleShot(400,this,[=](){
+            this->hide();
+            gameWidget->InitGame();
+            gameWidget->show();
+        });
+        qDebug()<<"切换至进阶难度界面";
+    });
+
+    connect(choseBtn3,&QPushButton::clicked,[=](){
+
+        choseBtn3->Zoom1();
+        choseBtn3->Zoom2();
+        QTimer::singleShot(400,this,[=](){
+            this->hide();
+            gameWidget->InitGame();
+            gameWidget->show();
+        });
+        qDebug()<<"切换至困难难度界面";
+    });
+
 
 
     connect(gameWidget,&GameWidget::backToMainWindow,[=](){

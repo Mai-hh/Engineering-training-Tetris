@@ -12,5 +12,5 @@ GameOverWidget::GameOverWidget(QWidget *parent) : QDialog(parent)
     backToStart->setFixedSize(100,25);
     backToStart->move(75,300);
     this->setFixedSize(250,450);
-    this->setWindowTitle("Game over !");
+    this->setWindowTitle("GG");
 }
