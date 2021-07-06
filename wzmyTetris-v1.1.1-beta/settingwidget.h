@@ -13,7 +13,8 @@ public:
 
 signals:
     void backToMainWindow();
-
+    void ClockRun();
+    void Restart();
 public slots:
 };
 

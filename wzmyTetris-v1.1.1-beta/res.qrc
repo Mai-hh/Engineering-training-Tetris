@@ -24,5 +24,6 @@
         <file>Image/settingbutton3.jpg</file>
         <file>Image/settingbutton4.jpg</file>
         <file>Image/settingbutton5.jpg</file>
+        <file>res/bgm.wav</file>
     </qresource>
 </RCC>

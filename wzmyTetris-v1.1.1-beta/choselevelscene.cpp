@@ -24,7 +24,6 @@ ChoseLevelScene::ChoseLevelScene(QWidget *parent) : QWidget(parent)
 
         qDebug()<<"切换至开始关卡界面";
     });
-
     MyButton *choseBtn=new MyButton(":/Image/scene1.jpg");
     gameWidget = new GameWidget;
     gameWidget->setWindowTitle("Have fun!");
@@ -36,8 +35,9 @@ ChoseLevelScene::ChoseLevelScene(QWidget *parent) : QWidget(parent)
 
         choseBtn->Zoom1();
         choseBtn->Zoom2();
-        QTimer::singleShot(500,this,[=](){
+        QTimer::singleShot(400,this,[=](){
             this->hide();
+            gameWidget->InitGame();
             gameWidget->show();
         });
         qDebug()<<"切换至游戏关卡界面";
