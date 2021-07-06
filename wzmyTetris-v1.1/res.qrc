@@ -19,5 +19,10 @@
         <file>Image/piece3.jpg</file>
         <file>Image/piece4.jpg</file>
         <file>Image/piece5.jpg.png</file>
+        <file>Image/settingbutton1.jpg</file>
+        <file>Image/settingbutton2.jpg</file>
+        <file>Image/settingbutton3.jpg</file>
+        <file>Image/settingbutton4.jpg</file>
+        <file>Image/settingbutton5.jpg</file>
     </qresource>
 </RCC>
