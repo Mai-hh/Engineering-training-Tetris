@@ -9,16 +9,16 @@
 #include "choselevelscene.h"
 #include "settingwidget.h"
 #include <QSound>
-#include <QRadioButton>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    QSound *startsound=new QSound(":/res/bgm.wav");
-    startsound->play();
-    startsound->setLoops(-1);
+
+    QSound * bgm = new QSound("",this);
+    bgm->play();
+    bgm->setLoops(-1);
     connect(ui->actionclose,&QAction::triggered,[=](){
 
         this->close();
@@ -53,7 +53,7 @@ MainWindow::MainWindow(QWidget *parent)
 
         this->hide();
         choseLevelScene->show();
-        //qDebug()<<"切换至选择关卡界面";
+        qDebug()<<"切换至选择关卡界面";
 
     });
 
@@ -70,34 +70,7 @@ MainWindow::MainWindow(QWidget *parent)
 
 //        settingWidget *settingwidget = new settingWidget(this);
 //        settingwidget->exec();
-//        qDebug()<<"切换至暂停界面";
-        //暂停时先停bgm
-//        startsound->stop();
-        //创建音乐对话框
-        QDialog music(this);
-        music.setFixedSize(400,200);
-        music.setWindowTitle("Music");
-
-        //创建两个单选项
-        QRadioButton *radioClose = new QRadioButton("关闭",&music);
-        QRadioButton *radioOpen = new QRadioButton("经典音乐",&music);
-        radioOpen->setChecked(true);//默认关闭bgm
-        radioClose->move(100,30);
-        radioOpen->move(100,60);
-
-        //检测两个按钮的状态并设置音乐
-        connect(radioClose,&QRadioButton::toggled,[=](bool checked){
-            if(checked == true)
-                   startsound->stop();
-            });
-            connect(radioOpen,&QRadioButton::toggled,[=](bool checked){
-               if(checked == true)
-                   startsound->play();
-                   startsound->setLoops(-1);//无限循环
-            });
-        music.resize(200,100);
-        music.exec();
-
+        qDebug()<<"切换至暂停界面";
     });
 
 
