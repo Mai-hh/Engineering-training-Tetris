@@ -14,7 +14,7 @@ settingWidget::settingWidget(QWidget *parent) : QDialog(parent)
     //开始按钮
     MyButton * startBtn = new MyButton(":/res/start1.png");
     startBtn->setParent(this);
-    startBtn->move(145,150);
+    startBtn->move(70,150);
     connect(startBtn,&MyButton::clicked,[=]()
     {
        startBtn->Zoom1();
@@ -29,7 +29,7 @@ settingWidget::settingWidget(QWidget *parent) : QDialog(parent)
     //重开按钮
     MyButton * restartBtn = new MyButton(":/res/restart .png");
     restartBtn->setParent(this);
-    restartBtn->move(145,300);
+    restartBtn->move(70,300);
     connect(restartBtn,&MyButton::clicked,[=]()
     {
        restartBtn->Zoom1();
@@ -45,7 +45,7 @@ settingWidget::settingWidget(QWidget *parent) : QDialog(parent)
     //音乐按钮
     MyButton * musicBtn = new MyButton(":/res/music.png");
     musicBtn->setParent(this);
-    musicBtn->move(145,450);
+    musicBtn->move(70,450);
     connect(musicBtn,&MyButton::clicked,[=]()
     {
        musicBtn->Zoom1();
@@ -57,7 +57,7 @@ settingWidget::settingWidget(QWidget *parent) : QDialog(parent)
     //home按钮
     MyButton * homeBtn = new MyButton(":/res/home.png");
     homeBtn->setParent(this);
-    homeBtn->move(145,600);
+    homeBtn->move(70,600);
     connect(homeBtn,&MyButton::clicked,[=]()
     {
        homeBtn->Zoom1();

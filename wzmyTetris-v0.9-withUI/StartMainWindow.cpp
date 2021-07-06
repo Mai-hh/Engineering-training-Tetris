@@ -36,9 +36,9 @@ MainWindow::MainWindow(QWidget *parent)
 
     });
 
-    MyButton *startBtn=new MyButton(":1.png");
+    MyButton *startBtn=new MyButton(":/Image/startbutton.jpg");
     startBtn->setParent(this);
-    startBtn->move(this->width()*0.5-startBtn->width()*0.5,this->height()*0.3);
+    startBtn->move(this->width()*0.5-startBtn->width()*0.5,this->height()*0.31);
 
     connect(startBtn,&QPushButton::clicked,[=](){
 
@@ -55,7 +55,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     });
 
-    MyButton *stopBtn=new MyButton(":stop.png");
+    MyButton *stopBtn=new MyButton(":/Image/settingbutton.jpg");
     stopBtn->setParent(this);
     stopBtn->move(this->width()*0.5-stopBtn->width()*0.5,this->height()*0.5);
 
@@ -76,7 +76,7 @@ void MainWindow::paintEvent(QPaintEvent *){
 
     //设置背景图
     QPixmap pix;
-    pix.load(":/beijing.jpg");
+    pix.load(":/Image/startbeijing1.webp");
 
     QPainter painter(this);
     painter.drawPixmap(0,0,this->width(),this->height(),pix);

@@ -9,6 +9,8 @@ class ChoseLevelScene : public QWidget
 public:
     explicit ChoseLevelScene(QWidget *parent = nullptr);
     GameWidget *gameWidget;
+    void paintEvent(QPaintEvent *);
+
 
 signals:
     void choseSceneBack();

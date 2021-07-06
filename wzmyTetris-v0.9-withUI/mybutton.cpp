@@ -16,14 +16,14 @@ MyButton::MyButton(QString normalImg,QString pressImg){
    pix.load(this->normalImgPath);
 
    //设置按键大小
-   this->setFixedSize(100,100);
+   this->setFixedSize(290,100);
 
    //设置不规则图片样式
    this->setStyleSheet("QPushButton{border:Opx}");
 
    //设置图片
    this->setIcon(pix);
-   this->setIconSize(QSize(100,100));
+   this->setIconSize(QSize(290,100));
 
 
 

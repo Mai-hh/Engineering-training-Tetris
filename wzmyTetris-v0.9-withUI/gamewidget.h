@@ -23,6 +23,7 @@ public:
     void paintEvent(QPaintEvent *event);
     void btn_set();
     void GameOver();
+    int line;
 
 signals:
     void backToMainWindow();

@@ -24,6 +24,7 @@ SOURCES += \
     main.cpp \
     mybutton.cpp \
     settingwidget.cpp
+    res.cpp\
 
 HEADERS += \
     StartMainWindow.h \
