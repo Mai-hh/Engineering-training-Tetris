@@ -3,7 +3,6 @@
 
 #include <QWidget>
 #include <QPushButton>
-#include "gameoverwidget.h"
 #include "settingwidget.h"
 #include <QKeyEvent>
 
@@ -52,7 +51,6 @@ public:
     explicit GameWidget(QWidget *parent = nullptr);
     QPushButton *btn_pause;
     QDialog *gameOver_dlg;
-    GameOverWidget *gameOverWidget;
     settingWidget *stWidget;
     virtual void paintEvent(QPaintEvent *) ;
 
