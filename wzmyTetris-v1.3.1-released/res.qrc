@@ -1,10 +1,5 @@
 <RCC>
     <qresource prefix="/">
-        <file>res/music.png</file>
-        <file>res/restart .png</file>
-        <file>res/settingbackground.jpg</file>
-        <file>res/start1.png</file>
-        <file>res/home.png</file>
         <file>Image/1.png</file>
         <file>Image/button.jpg</file>
         <file>Image/scene1.jpg</file>

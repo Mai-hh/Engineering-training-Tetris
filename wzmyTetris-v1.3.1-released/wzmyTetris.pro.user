@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.10.1, 2021-07-07T10:21:52. -->
+<!-- Written by QtCreator 4.10.1, 2021-07-07T11:18:18. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -304,8 +304,8 @@
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">wzmyTetris</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">wzmyTetris2</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:/home/qt-mod/Code/v1.2/wzmyTetris-v1.3.0-beta/wzmyTetris.pro</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:/home/qt-mod/Code/v1.3/wzmyTetris-v1.3.0-released/wzmyTetris.pro</value>
     <value type="QString" key="RunConfiguration.Arguments"></value>
     <value type="uint" key="RunConfiguration.QmlDebugServerPort">3768</value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>

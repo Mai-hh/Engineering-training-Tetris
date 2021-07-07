@@ -18,8 +18,6 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     StartMainWindow.cpp \
     choselevelscene.cpp \
-    gameoverwidget.cpp \
-    gamescenewindow.cpp \
     gamewidget.cpp \
     main.cpp \
     mybutton.cpp \
@@ -29,8 +27,6 @@ SOURCES += \
 HEADERS += \
     StartMainWindow.h \
     choselevelscene.h \
-    gameoverwidget.h \
-    gamescenewindow.h \
     gamewidget.h \
     mybutton.h \
     settingwidget.h
