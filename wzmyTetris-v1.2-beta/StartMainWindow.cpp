@@ -112,6 +112,18 @@ MainWindow::MainWindow(QWidget *parent)
 
     });
 
+    MyButton *topBtn=new MyButton(":/Image/topbutton.jpg");
+    topBtn->setParent(this);
+    topBtn->setFixedSize(110,110);
+    topBtn->move(44,838);
+
+    connect(topBtn,&QPushButton::clicked,[=](){
+
+        topBtn->Zoom1();
+        topBtn->Zoom2();
+        qDebug()<<"打开排行榜";
+    });
+
 
 }
 
