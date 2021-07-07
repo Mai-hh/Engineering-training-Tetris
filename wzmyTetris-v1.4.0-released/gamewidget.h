@@ -25,19 +25,19 @@ struct Border
     int dbound;
     int lbound;
     int rbound;
-};
+};//记录边界
 struct block_point
 {
     int pos_x;
     int pos_y;
-};
+};//记录方块抽象坐标
 class GameWidget : public QWidget
 {
     Q_OBJECT
 public:
-    void InitGame(int speed);
-    void GameOver();
-    void StartGame();
+    void InitGame(int speed);//初始化游戏，参数决定游戏速度
+    void GameOver();//游戏结束
+    void StartGame();//游戏开始
     void CreateBlock(int block[4][4],int blockId);
     void ResetBlock();
     void GetBorder(int block[4][4],Border &border);
@@ -67,7 +67,6 @@ private:
     int curBlock[4][4];
     Border curBorder;
     int nextBlock[4][4];
-
     int score;
     int gameTimer,paintTimer;
 signals:
