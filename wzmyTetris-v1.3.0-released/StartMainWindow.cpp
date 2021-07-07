@@ -10,7 +10,8 @@
 #include "settingwidget.h"
 #include <QSound>
 #include <QRadioButton>
-
+#include <QApplication>
+#include <QDesktopWidget>
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -31,7 +32,8 @@ MainWindow::MainWindow(QWidget *parent)
     this->setWindowTitle("StartMainWindow");
 
     choseLevelScene=new ChoseLevelScene();
-
+    QDesktopWidget *desktop = QApplication::desktop();
+    choseLevelScene->move((desktop->width()-choseLevelScene->width())/2,0);
     connect(choseLevelScene,&ChoseLevelScene::choseSceneBack,[=](){
 
         QTimer::singleShot(400,choseLevelScene,[=](){

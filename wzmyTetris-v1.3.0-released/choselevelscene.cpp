@@ -4,6 +4,8 @@
 #include <QTimer>
 #include <QDebug>
 #include <QPainter>
+#include <QApplication>
+#include <QDesktopWidget>
 ChoseLevelScene::ChoseLevelScene(QWidget *parent) : QWidget(parent)
 {
 
@@ -29,6 +31,8 @@ ChoseLevelScene::ChoseLevelScene(QWidget *parent) : QWidget(parent)
     gameWidget = new GameWidget;
     gameWidget->setWindowTitle("Have fun!");
 
+    QDesktopWidget *desktop = QApplication::desktop();
+    gameWidget->move(((desktop->width())-gameWidget->width())/2,0);
 
     MyButton *choseBtn=new MyButton(":/Image/scene1.jpg");
     choseBtn->setParent(this);
@@ -48,6 +52,7 @@ ChoseLevelScene::ChoseLevelScene(QWidget *parent) : QWidget(parent)
         choseBtn->Zoom2();
         QTimer::singleShot(400,this,[=](){
             this->hide();
+            gameWidget->setWindowTitle("Easy");
             gameWidget->InitGame(800);
             gameWidget->show();
         });
@@ -60,6 +65,7 @@ ChoseLevelScene::ChoseLevelScene(QWidget *parent) : QWidget(parent)
         choseBtn2->Zoom2();
         QTimer::singleShot(400,this,[=](){
             this->hide();
+            gameWidget->setWindowTitle("Common");
             gameWidget->InitGame(400);
             gameWidget->show();
         });
@@ -72,6 +78,7 @@ ChoseLevelScene::ChoseLevelScene(QWidget *parent) : QWidget(parent)
         choseBtn3->Zoom2();
         QTimer::singleShot(400,this,[=](){
             this->hide();
+            gameWidget->setWindowTitle("Hard");
             gameWidget->InitGame(100);
             gameWidget->show();
         });
