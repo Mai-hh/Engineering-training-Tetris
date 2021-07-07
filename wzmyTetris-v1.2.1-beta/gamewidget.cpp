@@ -145,7 +145,7 @@ void GameWidget::paintEvent(QPaintEvent *event)
                 painter.drawRect(Row*(SideLength+3)+j*SideLength+Margin,Margin+i*SideLength+50,SideLength,SideLength);
 
     painter.setPen(Qt::black);
-    painter.setFont(QFont("Arial",14));
+    painter.setFont(QFont("Arial",12));
     painter.drawText(QRect(Margin*5+Row*SideLength,Margin*2+6*SideLength,SideLength*4,SideLength*3),Qt::AlignCenter,"score: "+QString::number(score));
 
     for(int i=0;i<Line;i++)

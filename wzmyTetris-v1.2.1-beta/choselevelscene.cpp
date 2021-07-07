@@ -1,4 +1,4 @@
-#include "choselevelscene.h"
+﻿#include "choselevelscene.h"
 #include <QIcon>
 #include <mybutton.h>
 #include <QTimer>
@@ -13,7 +13,8 @@ ChoseLevelScene::ChoseLevelScene(QWidget *parent) : QWidget(parent)
 
     MyButton *backBtn=new MyButton(":/Image/backBtn");
     backBtn->setParent(this);
-    backBtn->move(this->width()*0.375,this->height()*0.845);
+    backBtn->setFixedSize(150,100);
+    backBtn->move(315,this->height()*0.845);
 
     connect(backBtn,&QPushButton::clicked,[=](){
 
@@ -31,15 +32,15 @@ ChoseLevelScene::ChoseLevelScene(QWidget *parent) : QWidget(parent)
 
     MyButton *choseBtn=new MyButton(":/Image/scene1.jpg");
     choseBtn->setParent(this);
-    choseBtn->move(this->width()*0.5-backBtn->width()*0.5,this->height()*0.21);
+    choseBtn->move(this->width()*0.5-145,this->height()*0.21);
 
     MyButton *choseBtn2=new MyButton(":/Image/scene2.jpg");
     choseBtn2->setParent(this);
-    choseBtn2->move(this->width()*0.5-backBtn->width()*0.5,this->height()*0.32);
+    choseBtn2->move(this->width()*0.5-145,this->height()*0.32);
 
     MyButton *choseBtn3=new MyButton(":/Image/scene3.jpg");
     choseBtn3->setParent(this);
-    choseBtn3->move(this->width()*0.5-backBtn->width()*0.5,this->height()*0.43);
+    choseBtn3->move(this->width()*0.5-145,this->height()*0.43);
 
     connect(choseBtn,&QPushButton::clicked,[=](){
 

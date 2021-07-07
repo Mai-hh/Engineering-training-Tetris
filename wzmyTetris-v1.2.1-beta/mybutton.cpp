@@ -2,6 +2,8 @@
 #include <QPropertyAnimation>
 #include <QTimer>
 #include <QDebug>
+#include <QCursor>
+
 ////MyButton::MyButton(QWidget *parent) : QPushButton(parent)
 ////{
 
@@ -24,7 +26,7 @@ MyButton::MyButton(QString normalImg,QString pressImg){
    //设置图片
    this->setIcon(pix);
    this->setIconSize(QSize(290,100));
-
+   this->setCursor(QCursor(Qt::PointingHandCursor));
 
 
 }
