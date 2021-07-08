@@ -356,7 +356,7 @@ void GameWidget::BlockMove(Direction dir)//方块移动
             lineCount++;
         }
     }
-    score+=lineCount*10;
+    score+=lineCount*10*lineCount;
 
     for(int j=0;j<Row;j++)
         if(GameArea[0][j]==2)//最顶端也有稳定方块

@@ -101,8 +101,4 @@ void ChoseLevelScene::paintEvent(QPaintEvent *){
 
     QPainter painter(this);
     painter.drawPixmap(0,0,this->width(),this->height(),pix);
-
-//    //设置标题图
-//    pix.load("");
-//    painter.drawPixmap(x,y,pix);
 }
